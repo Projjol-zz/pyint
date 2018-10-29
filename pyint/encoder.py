@@ -4,12 +4,12 @@ def encode(num):
     while True:
         # get first seven bits of number
         first_seven = num & 0x7f
-        num >>=2
+        num = num >> 7
         if num:
-            # make msb 1
+            # there are more bytes, make msb of first seven 1 and continue
             out.append(first_seven | 0x80)
         else:
+            # small number, no more bytes left, add first_seven without setting msb, since it is the last byte
             out.append(first_seven)
-            # reached last byte
             break
-        return out
+    return out
