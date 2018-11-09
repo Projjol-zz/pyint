@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyint",
-    version="1.0.0",
+    version="1.1.0",
     author="Projjol Banerji",
     author_email="ping@projjol.me",
     description="Python implementation of protobuf style varints",
